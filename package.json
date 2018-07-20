@@ -1,0 +1,32 @@
+{
+  "name": "react-cute",
+  "description": "Cute JSON's in React",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "bootstrap": "ts-react-toolbox init",
+    "dev": "ts-react-toolbox dev",
+    "test": "ts-react-toolbox test",
+    "test:ci": "ts-react-toolbox test --runInBand --coverage",
+    "build": "ts-react-toolbox build",
+    "release": "ts-react-toolbox release",
+    "lint": "ts-react-toolbox lint",
+    "static": "ts-react-toolbox publish",
+    "format": "ts-react-toolbox format",
+    "analyze": "ts-react-toolbox analyze"
+  },
+  "engines": {
+    "node": ">=8.5.0"
+  },
+  "devDependencies": {
+    "ts-react-toolbox": "^0.1.15"
+  },
+  "peerDependencies": {
+    "react": "^16.3.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "repository": "https://github.com/zzarcon/react-cute"
+}

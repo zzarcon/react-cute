@@ -1,2 +1,2 @@
 # react-cute
-JSON stringify in React
+> Cute JSON's in React
