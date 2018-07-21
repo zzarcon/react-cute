@@ -13,7 +13,7 @@ const syntaxHighlight = (json: Object): string => {
     if (/^"/.test(match)) {
       if (/:$/.test(match)) {
         className = ClassNames.key;
-        text = text.replace(':', '<span class="colon">:</span>');
+        text = text.replace(':', `<span class="${ClassNames.colon}">:</span>`);
       } else {
         if (match === '"undefined"') {
           className = ClassNames.undefined;
