@@ -1,4 +1,9 @@
-# react-cute
+<div align="center">
+  <img src="demo.png" alt="Logo" >
+  <br><br>
+</div>
+
+# react-cute [![Build Status](https://travis-ci.org/zzarcon/react-cute.svg?branch=master)](https://travis-ci.org/zzarcon/react-cute)
 > Cute JSON's in React
 
 # Demo 👀
