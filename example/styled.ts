@@ -15,6 +15,23 @@ export const AppWrapper = styled.div`
   background: white;
   padding: 20px;
   border-radius: 3px;
-  width: 1000px;
+  width: 600px;
   margin: 20px auto;
+`;
+
+export const JsonWrapper = styled.div`
+  border: 1px solid #ccc;
+  padding: 15px 30px;
+  border-radius: 3px;
+
+  h1 {
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+`;
+
+export const JsonsWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
 `;

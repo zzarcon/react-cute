@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Component} from 'react';
 import {GHCorner} from 'react-gh-corner';
 import Cute from '../src';
-import {AppWrapper} from './styled';
+import {AppWrapper, JsonWrapper, JsonsWrapper} from './styled';
 
 export interface AppState {
   
@@ -25,8 +25,6 @@ const json = {
     name: 'Spain',
     cities: ['Valencia', 'Barcelona']
   }, {
-    name: 'Austria'
-  }, {
     name: 'Australia'
   }]
 };
@@ -36,13 +34,72 @@ export default class App extends Component <{}, AppState> {
     
   }
 
+  renderUglyJson() {
+    return (
+      <JsonWrapper>
+        <h1>default</h1>
+        <pre>
+          {JSON.stringify(json, undefined, 2)}
+        </pre>
+      </JsonWrapper>
+    )
+  }
+
+  renderCute() {
+    return (
+      <JsonWrapper>
+        <h1>react-cute</h1>
+        <Cute
+          json={json}
+        />
+      </JsonWrapper>
+    )
+  }
+
+  renderFeatures() {
+    return (
+      <div>
+        <h1>
+          Features ✨
+        </h1>
+        <ul>
+          <li>
+            Out of the box UI
+          </li>
+          <li>
+            Different colors based on value type
+          </li>
+          <li>
+            Render values not showed by default
+          </li>
+          <li>
+            Dependency free + no external CSS
+          </li>
+          <li>
+             <a href="https://bundlephobia.com/result?p=react-cute" target="_blank">
+              3kB size
+             </a>
+          </li>
+        </ul>
+        <h1>
+          Install 🚀
+        </h1>
+        <pre>
+          $ yarn add react-cute
+        </pre>
+      </div>
+    )
+  }
+
   render() {
     return (
       <AppWrapper>
         <GHCorner openInNewTab href={repoUrl} />
-        <Cute 
-          json={json}
-        />
+        <JsonsWrapper>
+          {this.renderUglyJson()}
+          {this.renderCute()}
+        </JsonsWrapper>
+        {this.renderFeatures()}
       </AppWrapper>
     )
   }
