@@ -24,8 +24,6 @@ const json = {
   countries: [{
     name: 'Spain',
     cities: ['Valencia', 'Barcelona']
-  }, {
-    name: 'Australia'
   }]
 };
 

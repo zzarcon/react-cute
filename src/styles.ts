@@ -50,5 +50,6 @@ export const pre: CSSProperties = {
   padding: '10px 15px',
   background: '#272822',
   color: '#f8f8f2',
-  textShadow: '1px 1px black'
+  textShadow: '1px 1px black',
+  overflow: 'auto'
 };
