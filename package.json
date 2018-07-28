@@ -1,6 +1,6 @@
 {
   "name": "react-cute",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Cute JSON's in React",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,6 +28,15 @@
   "files": [
     "dist"
   ],
-  "keywords": [],
+  "keywords": [
+    "react",
+    "json",
+    "stringify",
+    "pretty",
+    "prettify",
+    "toString",
+    "cute",
+    "theme"
+  ],
   "repository": "https://github.com/zzarcon/react-cute"
 }
