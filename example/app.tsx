@@ -2,10 +2,10 @@ import * as React from 'react';
 import {Component} from 'react';
 import {GHCorner} from 'react-gh-corner';
 import Cute from '../src';
-import {AppWrapper, JsonWrapper, JsonsWrapper} from './styled';
+import {Title, AppWrapper, JsonWrapper, JsonsWrapper} from './styled';
 
 export interface AppState {
-  
+
 }
 
 const repoUrl = 'https://github.com/zzarcon/react-cute';
@@ -29,7 +29,7 @@ const json = {
 
 export default class App extends Component <{}, AppState> {
   state: AppState = {
-    
+
   }
 
   renderUglyJson() {
@@ -93,6 +93,7 @@ export default class App extends Component <{}, AppState> {
     return (
       <AppWrapper>
         <GHCorner openInNewTab href={repoUrl} />
+        <Title>Render cute JSON in React</Title>
         <JsonsWrapper>
           {this.renderUglyJson()}
           {this.renderCute()}
