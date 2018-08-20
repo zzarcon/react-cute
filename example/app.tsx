@@ -5,11 +5,11 @@ import Cute from '../src';
 import {Title, AppWrapper, JsonWrapper, JsonsWrapper} from './styled';
 
 export interface AppState {
-
+  json: Object;
 }
 
 const repoUrl = 'https://github.com/zzarcon/react-cute';
-const json = {
+const initialJson = {
   user: {
     name: 'Hector',
     lastName: 'Zarco'
@@ -29,14 +29,26 @@ const json = {
 
 export default class App extends Component <{}, AppState> {
   state: AppState = {
+    json: initialJson
+  }
 
+  onChange = (e: any) => {
+    try {
+      const text = e.target.textContent;
+      const json = JSON.parse(text);
+
+      this.setState({json});
+    } catch (e) {
+
+    }
   }
 
   renderUglyJson() {
+    const {json} = this.state;
     return (
       <JsonWrapper>
         <h1>default</h1>
-        <pre>
+        <pre contentEditable onInput={this.onChange}>
           {JSON.stringify(json, undefined, 2)}
         </pre>
       </JsonWrapper>
@@ -44,6 +56,8 @@ export default class App extends Component <{}, AppState> {
   }
 
   renderCute() {
+    const {json} = this.state;
+
     return (
       <JsonWrapper>
         <h1>react-cute</h1>
