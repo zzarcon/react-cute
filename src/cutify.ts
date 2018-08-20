@@ -1,12 +1,13 @@
 import {ClassNames} from './styles';
 
+const regEx = /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g;
 const syntaxHighlight = (json: Object): string => {
   const jsonString = JSON.stringify(json, replacer, 2)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
 
-  return jsonString.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, (match) => {
+  return jsonString.replace(regEx, (match) => {
     let className = ClassNames.number;
     let text = match;
     

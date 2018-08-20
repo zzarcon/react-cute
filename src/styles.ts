@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import {injectGlobal} from './injectGlobal';
+import {injectCSS} from './injectCSS';
 
 export enum ClassNames {
   string = 'cute-string',
@@ -12,7 +12,7 @@ export enum ClassNames {
   key = 'cute-key'
 };
 
-injectGlobal(`
+injectCSS(`
   .${ClassNames.string} {
     color: #f1fa8c; 
   }
