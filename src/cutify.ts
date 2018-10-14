@@ -1,4 +1,4 @@
-import {ClassNames} from './styles';
+import {ClassNames} from './cute';
 
 const regEx = /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g;
 const syntaxHighlight = (json: Object): string => {

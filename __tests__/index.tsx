@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {shallow, mount} from 'enzyme';
+import {mount} from 'enzyme';
 import Cute from '../src';
 
 describe('Cute', () => {
@@ -15,7 +15,12 @@ describe('Cute', () => {
         hobbies: ['coding', 'skate', 'gym']
       }
     };
-    const component = mount(<Cute json={json} />);
+    const color = {
+      string: '#fff',
+      number: 'rgb(255, 255, 255)',
+      function: 'rgba(0, 0, 0, 0.5)',
+    };
+    const component = mount(<Cute json={json} color={color} />);
     const html = component.find('pre').html();
 
     return {
@@ -71,5 +76,16 @@ describe('Cute', () => {
 
   it.skip('should work with Classes', () => {
     
+  });
+
+  it('should render a configure colors', () => {
+    const { component } = setup();
+    const color = component.prop('color');
+
+    expect(color).toEqual({
+      string: '#fff',
+      number: 'rgb(255, 255, 255)',
+      function: 'rgba(0, 0, 0, 0.5)'
+    });
   });
 });

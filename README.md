@@ -16,6 +16,8 @@
 
 # Usage ⛏
 
+**Basic**
+
 ```jsx
 import Cute from 'react-cute';
 
@@ -25,6 +27,30 @@ const json = {
 };
 
 <Cute json={json} />
+```
+
+**Custom**
+
+```tsx
+import Cute from 'react-cute';
+
+const json = {
+  name: 'hector',
+  twitter: '@zzarcon'
+};
+
+const color = {
+  string: '#fff',
+  number: '#000000',
+  function: 'rgb(255, 255, 255)',
+  boolean: 'rgba(0, 0, 0, 0.5)',
+  null: 'red',
+  undefined: 'hsl(30, 100%, 50%, 0.6)',
+  key: 'hsla(30, 100%, 50%, 0.6)',
+  colon: 'initial',
+}
+
+<Cute json={json} color={color} />
 ```
 
 # Features ✨
